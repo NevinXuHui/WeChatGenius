@@ -8,7 +8,7 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.util;
+package net.nevinxu.wechatgenius.util;
 
 import java.util.concurrent.TimeUnit;
 

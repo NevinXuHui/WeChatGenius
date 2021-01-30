@@ -8,7 +8,7 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.util;
+package net.nevinxu.wechatgenius.util;
 
 public final class StringUtils {
     public static boolean isEmpty(final CharSequence s) {

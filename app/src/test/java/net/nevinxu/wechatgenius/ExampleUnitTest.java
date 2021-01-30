@@ -1,4 +1,4 @@
-package net.dalu2048.wechatgenius;
+package net.nevinxu.wechatgenius;
 
 import org.junit.Test;
 

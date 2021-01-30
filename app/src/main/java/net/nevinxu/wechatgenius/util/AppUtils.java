@@ -8,7 +8,7 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.util;
+package net.nevinxu.wechatgenius.util;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -20,6 +20,7 @@ public final class AppUtils {
     //安装包
     public static final String PACKAGE_NAME_WECHAT = "com.tencent.mm";
     public static final String PACKAGE_NAME_XPOSED = "de.robv.android.xposed.installer";
+    public static final String PACKAGE_NAME_EDXPOSED = "org.meowcat.edxposed.manager";
 
     //获取当前APP的版本
     public static String getVersionName(Context context) {

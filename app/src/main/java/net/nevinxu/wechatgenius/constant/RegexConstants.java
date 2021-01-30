@@ -8,7 +8,7 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.constant;
+package net.nevinxu.wechatgenius.constant;
 
 /**
  * <pre>

@@ -8,27 +8,24 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.ui.user;
+package net.nevinxu.wechatgenius.ui.user;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qmuiteam.qmui.util.QMUIKeyboardHelper;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
-import net.dalu2048.wechatgenius.MainActivity;
-import net.dalu2048.wechatgenius.R;
-import net.dalu2048.wechatgenius.ui.AboutActivity;
-import net.dalu2048.wechatgenius.util.RegexUtils;
-import net.dalu2048.wechatgenius.util.StringUtils;
+import net.nevinxu.wechatgenius.MainActivity;
+import net.nevinxu.wechatgenius.R;
+import net.nevinxu.wechatgenius.ui.AboutActivity;
+import net.nevinxu.wechatgenius.util.RegexUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

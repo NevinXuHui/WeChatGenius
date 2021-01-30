@@ -1,4 +1,4 @@
-package net.dalu2048.wechatgenius;
+package net.nevinxu.wechatgenius;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,15 +6,14 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Toast;
 
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView;
 import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;
 
-import net.dalu2048.wechatgenius.entity.AppInfo;
-import net.dalu2048.wechatgenius.net.HttpRequest;
+import net.nevinxu.wechatgenius.entity.AppInfo;
+import net.nevinxu.wechatgenius.net.HttpRequest;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,19 +97,19 @@ public class MainActivity extends Activity {
 
         //region Xposed框架状态
         //Xposed版本
-        QMUICommonListItemView listItemXposed = mGroupListView.createItemView("Xposed版本");
-        boolResult = appInfo.isXposedInstall();
-        listItemXposed.setDetailText(boolResult ? "V" + appInfo.getXposedVersionName() : "未安装");
-        listItemXposed.setImageDrawable(ContextCompat.getDrawable(this, boolResult ? R.drawable.qmui_icon_checkbox_checked : R.mipmap.icon_error));
+        QMUICommonListItemView listItemEdXposed = mGroupListView.createItemView("EdXposed版本");
+        boolResult = appInfo.isEdXposedInstall();
+        listItemEdXposed.setDetailText(boolResult ? "V" + appInfo.getEdXposedVersionName() : "未安装");
+        listItemEdXposed.setImageDrawable(ContextCompat.getDrawable(this, boolResult ? R.drawable.qmui_icon_checkbox_checked : R.mipmap.icon_error));
         //Xposed模块激活
-        QMUICommonListItemView listItemXposedActive = mGroupListView.createItemView("Xposed模块激活");
-        boolResult = appInfo.isXposedActive();
-        listItemXposedActive.setDetailText(boolResult ? "已激活" : "未激活");
-        listItemXposedActive.setImageDrawable(ContextCompat.getDrawable(this, boolResult ? R.drawable.qmui_icon_checkbox_checked : R.mipmap.icon_error));
+        QMUICommonListItemView listItemEdXposedActive = mGroupListView.createItemView("EdXposed模块激活");
+        boolResult = appInfo.isEdXposedActive();
+        listItemEdXposedActive.setDetailText(boolResult ? "已激活" : "未激活");
+        listItemEdXposedActive.setImageDrawable(ContextCompat.getDrawable(this, boolResult ? R.drawable.qmui_icon_checkbox_checked : R.mipmap.icon_error));
         QMUIGroupListView.newSection(this)
-                .setTitle("Xposed框架状态")
-                .addItemView(listItemXposed, null)
-                .addItemView(listItemXposedActive, null)
+                .setTitle("EdXposed框架状态")
+                .addItemView(listItemEdXposed, null)
+                .addItemView(listItemEdXposedActive, null)
                 .addTo(mGroupListView);
         //endregion
 

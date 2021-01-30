@@ -8,15 +8,15 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.entity;
+package net.nevinxu.wechatgenius.entity;
 
 import android.content.Context;
 import android.os.Build;
 
-import net.dalu2048.wechatgenius.constant.SupportVersion;
-import net.dalu2048.wechatgenius.util.AppUtils;
-import net.dalu2048.wechatgenius.util.ShellUtil;
-import net.dalu2048.wechatgenius.util.StringUtils;
+import net.nevinxu.wechatgenius.constant.SupportVersion;
+import net.nevinxu.wechatgenius.util.AppUtils;
+import net.nevinxu.wechatgenius.util.ShellUtil;
+import net.nevinxu.wechatgenius.util.StringUtils;
 
 public final class AppInfo {
     //Android系统版本
@@ -29,6 +29,9 @@ public final class AppInfo {
     //Xposed是否安装
     private boolean mIsXposedInstall;
     private String mXposedVersionName;
+    //EdXposed是否安装
+    private boolean mIsEdXposedInstall;
+    private String mEdXposedVersionName;
     //微信是否安装、版本号
     private boolean mIsWechatInstall;
     private String mWechatVersionName;
@@ -71,6 +74,10 @@ public final class AppInfo {
         mXposedVersionName = AppUtils.getAppVersionName(context, AppUtils.PACKAGE_NAME_XPOSED);
         mIsXposedInstall = !StringUtils.isEmpty(getXposedVersionName());
 
+        //判断EdXposed是否安装
+        mEdXposedVersionName = AppUtils.getAppVersionName(context, AppUtils.PACKAGE_NAME_EDXPOSED);
+        mIsEdXposedInstall = !StringUtils.isEmpty(getEdXposedVersionName());
+
         //检测安卓版本是否符合要求
         mIsSupportAndroid = isContainAndroidVersion();
         //判断微信版本是否符合要求
@@ -112,6 +119,14 @@ public final class AppInfo {
         return mIsXposedInstall;
     }
 
+    public boolean isEdXposedActive() {
+        return AppUtils.isModuleActive();
+    }
+
+    public boolean isEdXposedInstall() {
+        return mIsEdXposedInstall;
+    }
+
     public void setXposedInstall(boolean xposedInstall) {
         mIsXposedInstall = xposedInstall;
     }
@@ -122,6 +137,14 @@ public final class AppInfo {
 
     public void setXposedVersionName(String xposedVersionName) {
         mXposedVersionName = xposedVersionName;
+    }
+
+    public String getEdXposedVersionName() {
+        return mEdXposedVersionName;
+    }
+
+    public void setEdXposedVersionName(String EdxposedVersionName) {
+        mEdXposedVersionName = EdxposedVersionName;
     }
 
     public String getAndroidVersionName() {

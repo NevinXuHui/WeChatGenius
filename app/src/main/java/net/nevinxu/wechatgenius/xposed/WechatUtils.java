@@ -8,7 +8,7 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.xposed;
+package net.nevinxu.wechatgenius.xposed;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

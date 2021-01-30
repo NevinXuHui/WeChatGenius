@@ -8,9 +8,9 @@
  * ************************************************************
  */
 
-package net.dalu2048.wechatgenius.net;
+package net.nevinxu.wechatgenius.net;
 
-import net.dalu2048.wechatgenius.util.OkHttpUtils;
+import net.nevinxu.wechatgenius.util.OkHttpUtils;
 
 import java.io.IOException;
 
