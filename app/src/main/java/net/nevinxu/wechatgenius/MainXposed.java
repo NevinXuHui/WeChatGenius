@@ -53,7 +53,7 @@ public final class MainXposed implements IXposedHookLoadPackage {
         //endregion
 
         if (!lpparam.processName.equals(WECHAT_PROCESS_NAME)) {
-            Log.i(TAG,"非微信进程");
+            Log.i(TAG,"非微信进程:"+ lpparam.processName);
             return;
         }
         XposedBridge.log("进入微信进程：" + lpparam.processName);
