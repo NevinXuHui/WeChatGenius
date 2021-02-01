@@ -22,13 +22,14 @@
             android:name="xposedminversion"
             android:value="82" />
 
-        <activity android:name="net.nevinxu.wechatgenius.MainActivity"></activity>
-        <activity android:name="net.nevinxu.wechatgenius.ui.user.LoginActivity">
+        <activity android:name="net.nevinxu.wechatgenius.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="net.nevinxu.wechatgenius.ui.user.LoginActivity">
         </activity>
         <activity android:name="net.nevinxu.wechatgenius.ui.AboutActivity"></activity>
     </application>
